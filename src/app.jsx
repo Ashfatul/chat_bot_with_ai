@@ -35,6 +35,7 @@ const App = () => {
                         bot: res.candidates[0].content,
                     }]);
                     setLoading(false);
+                    setQuery('')
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -71,7 +72,7 @@ const App = () => {
                 </div>
                 <div className="send_message">
                     <form onSubmit={askQuestionToAI}>
-                        <input type="text" onChange={queryText} placeholder="Ask a question ..." />
+                        <input type="text" onChange={queryText} value={query} placeholder="Ask a question ..." />
                         <button><i className="fa-regular fa-paper-plane"></i></button>
                     </form>
                 </div>
