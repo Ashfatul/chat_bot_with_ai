@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #292e2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.chat_section{
+    width: 400px;
+    background: #fff;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatAreaContainer{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+
+.chat_heading{
+    background: #11326b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-variant-caps: petite-caps;
+}
+
+.chatAreaContainer{
+    height: inherit;
+}
+
+.chatAreaContainer {
+    padding: 20px;
+}
+
+.chat_history {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.send_message form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    border-radius: 6px;
+    border: none;
+    flex-grow: 1;
+    background: aliceblue;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: -1px 1px 0px 3px gray;
+    font-size: 16px;
+}
+
+input:is(:focus, :active, :focus-visible){
+    outline: none;
+    background: #E3F2FD;
+}
+
+button{
+    background: none;
+    border: 0;
+}
+
+button i{
+    font-size: 28px;
+    color: gray;
+}
+
+button:hover i{
+    color: #11326b;
+    cursor: pointer;
+}
+
+.reply_from_ai {
+    display: flex;
+    gap: 10px;
+}
+
+.reply_from_ai p{
+    background: #a200ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    width: 50%;
+}
+
+.reply_from_ai i{
+    min-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #a200ff;
+}
+
+.user_query {
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+.user_query i{
+    min-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #11326b;
+}
+
+.user_query p{
+    background: #11326b;
+    padding: 10px 20px;
+    border-radius: 10px;    
+    color: white;
+    font-size: 18px;
+    width: 50%;
+}
+.author_credit {
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+    font-family: cursive;
+    font-size: 14px;
+}
+
+.author_credit a{
+    color: #11326b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.author_credit a:hover{
+    color: #a200ff;
+}
