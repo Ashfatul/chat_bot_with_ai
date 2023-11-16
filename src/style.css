@@ -168,3 +168,21 @@ button:hover i{
 .author_credit a:hover{
     color: #a200ff;
 }
+
+.loading{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    background: rgba(90, 113, 151, 0.7);
+}
+
+.loading p{
+    color: #ffff;
+    font-size: 30px;
+}

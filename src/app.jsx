@@ -5,6 +5,7 @@ const App = () => {
 
     const [query, setQuery] = useState('');
     const [messages, setMessages] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     console.log(messages);
 
@@ -15,8 +16,9 @@ const App = () => {
     const askQuestionToAI = (e) => {
         e.preventDefault();
         if (query.length == 0) {
-            alert('Write Something First!')
+            alert('Write Something First!');
         } else {
+            setLoading(true);
             fetch('http://localhost:5599/query', {
                 method: 'POST',
                 headers: {
@@ -31,9 +33,13 @@ const App = () => {
                     setMessages([...messages, {
                         author: res.messages[0].content,
                         bot: res.candidates[0].content,
-                    }])
+                    }]);
+                    setLoading(false);
                 })
-                .catch(error => console.error('Error:', error));
+                .catch(error => {
+                    console.error('Error:', error);
+                    setLoading(false);
+                });
 
         }
     }
@@ -44,6 +50,8 @@ const App = () => {
                 Chat Bot Using AI
             </div>
             <div className="chatAreaContainer">
+
+                {loading && <div className="loading"><p>Generating ...</p></div>}
 
                 <div className="chat_history">
                     {messages.map((message, index) => (
