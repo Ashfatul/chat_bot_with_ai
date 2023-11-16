@@ -50,6 +50,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: auto;
+}
+
+.user_query{
+    margin-bottom: 20px;
 }
 
 .send_message form {
