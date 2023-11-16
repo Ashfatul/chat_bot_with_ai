@@ -19,7 +19,7 @@ const App = () => {
             alert('Write Something First!');
         } else {
             setLoading(true);
-            fetch('http://localhost:5599/query', {
+            fetch('https://chat-with-ai-omega.vercel.app/query', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
